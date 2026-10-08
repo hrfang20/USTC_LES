@@ -1,0 +1,48 @@
+! PREPROCESSING DRAFT ONLY: not a calibrated SABL/campus simulation.
+! runtime=0 prevents a production time integration; IBM files are still needed.
+&RUN
+iexpnr = 001
+runtime = 0.
+dtmax = 0.2
+ladaptive = .true.
+nprocx = 1
+nprocy = 1
+libm = .true.
+/
+&DOMAIN
+itot = 218
+jtot = 270
+ktot = 80
+xlen = 1090.
+ylen = 1350.
+xlat = 31.84
+/
+&PHYSICS
+lcoriol = .true.
+lbuoyancy = .false.
+ltempeq = .false.
+lmoist = .false.
+/
+&NAMSUBGRID
+lvreman = .true.
+/
+&WALLS
+iwallmom = 2
+iwalltemp = 1
+iwallmoist = 1
+/
+&ENERGYBALANCE
+lEB = .false.
+/
+&INPS
+zsize = 400.
+u0 = 8.0
+v0 = 0.0
+thl0 = 288.
+qt0 = 0.
+tke = 0.1
+gen_geom = .true.
+stl_file = 'geom.001.stl'
+stl_ground = .true.
+nompthreads = 4
+/

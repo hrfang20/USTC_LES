@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/uDALES/u-dales.git",
+  "revision": "42e40b6e1efd5529cfba8edd35005123e0ff70e4",
+  "local_path": "vendor/u-dales",
+  "python_environment": "turbpy",
+  "python_dependencies_path": "vendor/python-deps",
+  "note": "Source read/geometry tools executed; solver and Fortran preprocessing extensions not compiled. Reproducibility requires this revision, not a future branch head."
+}

@@ -1,0 +1,14 @@
+{
+  "case": "JHTDB SABL regular cooling reference",
+  "status": "reference_only_not_a_solver_configuration",
+  "source": "https://turbulence.idies.jhu.edu/datasets/geophysicalTurbulence/sabl",
+  "domain_m": [400, 400, 400],
+  "grid_cells": [2048, 2048, 2048],
+  "geostrophic_velocity_m_s": [8.0, 0.0],
+  "surface_roughness_m": 0.1,
+  "surface_cooling_magnitude_K_h": 0.25,
+  "strong_case_cooling_magnitude_K_h": 1.0,
+  "coriolis_parameter_s_inv": null,
+  "initial_potential_temperature_K": null,
+  "notes": "Wind aligned with reference x for bookkeeping. Coriolis and thermal profile require verification against dataset README."
+}

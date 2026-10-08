@@ -1,0 +1,19 @@
+{
+  "status": "draft_preprocessing_only",
+  "udales_grid_and_profiles_verified": true,
+  "grid_cells": [
+    218,
+    270,
+    80
+  ],
+  "total_cells": 4708800,
+  "geostrophic_velocity_m_s": [
+    8.0,
+    0.0
+  ],
+  "ibm_completed": false,
+  "simulation_started": false,
+  "production_platform_decision": "deferred_until_simulation_launch",
+  "thermal_note": "Temperature transport and buoyancy disabled for input preparation; not SABL yet",
+  "ibm_error": "ibm_preproc_f2py module not available; build it with tools/build_preprocessing.sh."
+}

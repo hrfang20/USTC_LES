@@ -1,0 +1,72 @@
+{
+  "solver": "uDALES",
+  "udales_revision": "42e40b6e1efd5529cfba8edd35005123e0ff70e4",
+  "source": "OpenStreetMap contributors, ODbL",
+  "source_endpoint": "https://api.openstreetmap.org/api/0.6/map?bbox=117.255%2C31.826%2C117.277%2C31.846",
+  "google_maps_verified": false,
+  "study_area_m2": 624790.6830990004,
+  "boundary_road_contact_m": {
+    "黄山路": 360.25358805522626,
+    "太湖路": 784.921232488845,
+    "金寨路": 1033.9020829621752,
+    "宿松路": 1046.9833514271422
+  },
+  "origin_utm50n_m": [
+    524414.3511399352,
+    3521952.633382215
+  ],
+  "origin_wgs84": [
+    117.25800808431049,
+    31.832985497564348
+  ],
+  "suggested_domain_m": [
+    1090,
+    1350,
+    400
+  ],
+  "horizontal_buffer_m": 150.0,
+  "buffer_note": "Planning buffer only; no surrounding buffer buildings acquired for the exported STL",
+  "building_records": 146,
+  "height_sources": {
+    "OSM levels times assumed floor height": 9,
+    "assumed default scenario, no measured height": 137
+  },
+  "default_height_m": 12.0,
+  "floor_height_m": 3.3,
+  "stl_file": "cases/001/buildings.stl",
+  "stl_triangles": 4178,
+  "stl_bounds_m": [
+    [
+      165.36166381835938,
+      198.84642028808594,
+      0.0
+    ],
+    [
+      910.2012329101562,
+      1157.7384033203125,
+      52.79999923706055
+    ]
+  ],
+  "stl_watertight": true,
+  "stl_winding_consistent": true,
+  "udales_geometry_check": {
+    "valid": true,
+    "issues": [],
+    "summary": "Mesh check\n- valid: True\n- faces: 4178\n- vertices: 2348\n- independent surfaces: 131\n- issues:\n  - mesh has 131 independent surfaces"
+  },
+  "ground_stl_file": "cases/001/geom.001.stl",
+  "ground_stl_triangles": 27513,
+  "ground_geometry_check": {
+    "valid": true,
+    "issues": [],
+    "summary": "Mesh check\n- valid: True\n- faces: 27513\n- vertices: 13874\n- independent surfaces: 1\n- issues: none"
+  },
+  "status": "geometry_read_by_official_UDGeom_not_full_IBM_preprocessing_or_simulation",
+  "remaining": [
+    "Google Maps layout and data completeness verification",
+    "Building height calibration",
+    "IBM grid preprocessing",
+    "Stable ABL forcing/walls and namoptions",
+    "Compute-platform assessment at simulation launch stage"
+  ]
+}

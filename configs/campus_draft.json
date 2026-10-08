@@ -1,0 +1,69 @@
+{
+  "case": "USTC east campus planning example",
+  "status": "draft_not_calibrated",
+  "latitude_deg": 31.84,
+  "latitude_status": "approximate_Hefei_latitude_not_a_survey_coordinate",
+  "coordinate_origin_wgs84": [
+    117.25800808431049,
+    31.832985497564348
+  ],
+  "campus_boundary_verified": false,
+  "study_area": {
+    "boundary_roads": [
+      "黄山路",
+      "太湖路",
+      "金寨路",
+      "宿松路"
+    ],
+    "extent_source": "user_defined",
+    "boundary_status": "delineated_from_OSM_pending_Google_Maps_verification",
+    "boundary_convention": "interior enclosed face of mapped carriageways",
+    "boundary_geometry_file": "data/geometry/study_area.geojson",
+    "include_non_campus_buildings": true
+  },
+  "geometry_simplification": {
+    "enabled": true,
+    "representation": "simplified_footprints_extruded_to_building_heights",
+    "preserve": [
+      "major_buildings",
+      "building_positions_and_orientation",
+      "building_group_layout",
+      "height_contrasts",
+      "main_street_canyons_and_open_spaces"
+    ],
+    "omit_candidates": [
+      "small_rooftop_details",
+      "minor_facade_details",
+      "small_ancillary_structures_without_flow_significance"
+    ],
+    "merge_only_if_no_key_passage_is_closed": true,
+    "height_assumptions_must_be_recorded": true,
+    "minimum_building_size_m": null,
+    "footprint_tolerance_m": 0.5,
+    "minimum_unnamed_low_structure_area_m2": 25.0
+  },
+  "domain_m": [
+    1090,
+    1350,
+    400
+  ],
+  "grid_spacing_m": [
+    5,
+    5,
+    5
+  ],
+  "geostrophic_velocity_m_s": [
+    8.0,
+    0.0
+  ],
+  "surface_roughness_m": 0.1,
+  "surface_cooling_magnitude_K_h": 0.25,
+  "advection_cfl_target": 0.5,
+  "planning_speed_m_s": 12.0,
+  "field_count_for_memory_estimate": 12,
+  "bytes_per_value": 8,
+  "geometry_file": "data/geometry/buildings.geojson",
+  "solver": "uDALES",
+  "notes": "Illustrative domain/coarse grid only. Eastward wind, cooling and roughness are reference scenarios, not local observations.",
+  "udales_geometry_file": "cases/001/geom.001.stl"
+}

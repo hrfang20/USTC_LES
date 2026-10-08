@@ -1,0 +1,14 @@
+# Install into vendor/python-deps using the turbpy interpreter; keep its NumPy/SciPy.
+shapely==2.2.0
+pyproj==3.7.2
+trimesh==5.1.1
+mapbox-earcut==2.1.0
+triangle==20250106
+f90nml==1.5.0
+manifold3d==3.5.4
+xarray==2026.9.0
+netCDF4==1.7.4
+cftime==1.6.6
+h5netcdf==1.8.1
+h5py==3.16.0
+networkx==3.6.1
