@@ -13,10 +13,10 @@
 在项目目录的 PowerShell 中执行：
 
 ```powershell
-& C:\Users\Admin\anaconda3\envs\turbpy\python.exe scripts\preflight.py
-& C:\Users\Admin\anaconda3\envs\turbpy\python.exe scripts\prepare_udales_geometry.py
-& C:\Users\Admin\anaconda3\envs\turbpy\python.exe scripts\prepare_udales_inputs.py
-& C:\Users\Admin\anaconda3\envs\turbpy\python.exe -m unittest discover -s tests
+conda run -n turbpy python scripts\preflight.py
+conda run -n turbpy python scripts\prepare_udales_geometry.py
+conda run -n turbpy python scripts\prepare_udales_inputs.py
+conda run -n turbpy python -m unittest discover -s tests
 ```
 
 也可以先 `conda activate turbpy`，再运行相应脚本。打开 `notebooks/02_udales_geometry.ipynb`，选择 **turbpy** 内核，可直接用官方读取器打开已生成的建筑模型。原始 `test.ipynb` 和 `test.py` 保留。

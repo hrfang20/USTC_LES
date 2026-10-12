@@ -19,10 +19,10 @@ uDALES Python 工具来自固定提交 `42e40b6e1efd5529cfba8edd35005123e0ff70e4
 ```powershell
 git clone https://github.com/uDALES/u-dales.git vendor/u-dales
 git -C vendor/u-dales checkout 42e40b6e1efd5529cfba8edd35005123e0ff70e4
-& C:\Users\Admin\anaconda3\envs\turbpy\python.exe -m pip install --target vendor/python-deps --no-deps -r configs/geometry_requirements.txt
-& C:\Users\Admin\anaconda3\envs\turbpy\python.exe scripts/fetch_osm.py --osm-api
-& C:\Users\Admin\anaconda3\envs\turbpy\python.exe scripts/prepare_udales_geometry.py
-& C:\Users\Admin\anaconda3\envs\turbpy\python.exe scripts/prepare_udales_inputs.py
+conda run -n turbpy python -m pip install --target vendor/python-deps --no-deps -r configs/geometry_requirements.txt
+conda run -n turbpy python scripts/fetch_osm.py --osm-api
+conda run -n turbpy python scripts/prepare_udales_geometry.py
+conda run -n turbpy python scripts/prepare_udales_inputs.py
 ```
 
 基础 turbpy 需已有 numpy、scipy、pandas、matplotlib、requests、packaging 和 certifi。原始快照放在 `data/raw/`，Git 默认忽略；重新下载可能随 OSM 编辑而变化。GeoJSON、建筑清单、STL 和报告作为当前派生结果保留。数据来源为 OpenStreetMap contributors，遵循 [ODbL](https://www.openstreetmap.org/copyright)，不是 Google Maps 提取或已核验的 Google Maps 数据。生成物保留来源，不将假设高度当作测量值。

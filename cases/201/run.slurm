@@ -9,7 +9,7 @@
 #SBATCH --mem=16G
 #SBATCH --output=udales-%j.log
 
-set -euo pipefail
+set -eo pipefail
 . /etc/profile.d/modules.sh
 module load <COMPILER_MODULE>
 module load <MPI_MODULE>
