@@ -4,3 +4,4 @@ cases/201/run.slurm text eol=lf
 cases/201/SHA256SUMS text eol=lf
 scripts/hpc-deps/Makefile text eol=lf
 cases/001/*.slurm text eol=lf
+cases/202/*.slurm text eol=lf

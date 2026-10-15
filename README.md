@@ -57,6 +57,7 @@
 | 编译依赖及求解器 | [依赖构建说明](docs/hpc_build.md)、[通用安装说明](docs/hpc_udales.md) |
 | 官方 201 运行 | [201 操作说明](docs/hpc_case201.md) |
 | 校园中性风场准备、IBM 与试算 | [校园运行说明](docs/campus_neutral_run.md) |
+| 校园 202 热力耦合实验（已完成约 7400 s 物理时间试算） | [202 设置与运行](docs/campus202_run.md) |
 | 物理方法与验证路线 | [方法说明](docs/methodology.md) |
 | 几何核验 | [几何说明](docs/geometry.md) |
 
@@ -79,9 +80,11 @@ python scripts/prepare_udales_inputs.py
 ```bash
 python scripts/visualize_case201.py
 python scripts/visualize_campus_wind.py
+python scripts/visualize_campus202.py
+python scripts/visualize_campus202_long.py
 ```
 
-图像分别输出到 outputs/validation/figures/201 和 outputs/validation/figures/campus001，同时生成 PNG/PDF 与摘要，校园脚本额外生成 GIF。README 展示的发布副本放在 docs/assets/，再次绘图不会自动覆盖发布图片。原始 cases/001/input_status.json 记录的是早期本地准备状态，不代表后来远程前处理和试算的最新状态。
+图像输出到 `outputs/validation/figures/` 下对应算例目录，同时生成 PNG/PDF 与摘要，校园脚本额外生成 GIF。长时段 202 脚本默认读取 `outputs/validation/run/202/202_run7200/`，比较最后两个一小时统计窗口。README 展示的发布副本放在 `docs/assets/`，再次绘图不会自动覆盖发布图片。原始 `cases/001/input_status.json` 记录的是早期本地准备状态，不代表后来远程前处理和试算的最新状态。
 
 ## 下一步
 
