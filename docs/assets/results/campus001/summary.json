@@ -1,0 +1,27 @@
+{
+  "times_s": [
+    10.199999809265137,
+    20.200000762939453,
+    30.200000762939453,
+    40.0,
+    50.0,
+    60.0
+  ],
+  "heights_m": [
+    7.5,
+    17.5,
+    57.5
+  ],
+  "mpi_tiles": 4,
+  "grid_xy": [
+    218,
+    270
+  ],
+  "colormap_max_m_s": 13.0,
+  "sampled_fluid_speed_min_max_m_s": [
+    0.013790939934551716,
+    12.50101089477539
+  ],
+  "interpretation": "Initial 60-second transient; not a statistically steady result.",
+  "processing": "MPI tiles joined by coordinates, u/v interpolated to centers, solid_c masked; periodic interpolation."
+}

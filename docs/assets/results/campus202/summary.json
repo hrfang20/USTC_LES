@@ -1,0 +1,39 @@
+{
+  "last_field_time_s": 200.1999969482422,
+  "last_profile_time_s": 194.0,
+  "surface_mean_temperature_K": [
+    295.0169304176807,
+    296.43636951057954
+  ],
+  "surface_final_min_max_K": [
+    294.861572265625,
+    296.72265625
+  ],
+  "selected_height_mean_u_m_s": {
+    "7.5": [
+      1.425136685371399,
+      1.178279995918274
+    ],
+    "17.5": [
+      1.492255687713623,
+      1.4084080457687378
+    ],
+    "57.5": [
+      1.4999306201934814,
+      1.4961515665054321
+    ]
+  },
+  "last_flux_area_means_W_m2": {
+    "netsw": 415.24606484487543,
+    "LWin": 332.17407462930527,
+    "LWout": 372.16290145882533,
+    "hf": -10.348110831813674,
+    "ef": 0.0
+  },
+  "finite_checks": "Selected field slices, all native profiles, surface temperatures and area-mean fluxes checked.",
+  "notes": [
+    "200 s initial transient, not statistically stationary.",
+    "qt native values treated as kg/kg based on source despite incorrect field metadata.",
+    "No independent reference output comparison or complete energy-closure test."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "field_time_range_s": [
+    230.39999389648438,
+    7400.39990234375
+  ],
+  "field_snapshots": 240,
+  "field_interval_median_s": 30.0,
+  "profile_time_range_s": [
+    230.60000610351562,
+    7388.0
+  ],
+  "surface_time_range_s": [
+    202.39999389648438,
+    7400.2001953125
+  ],
+  "surface_temperature_K": {
+    "initial_mean": 295.0169721225507,
+    "final_mean": 308.16045024021184,
+    "final_min": 292.9067687988281,
+    "final_max": 314.7928466796875
+  },
+  "mean_u_stationarity": {
+    "7.5": {
+      "previous_hour_mean_u_m_s": 0.9359232187271118,
+      "final_hour_mean_u_m_s": 0.7375600337982178,
+      "relative_change_percent": -21.194386565029863
+    },
+    "17.5": {
+      "previous_hour_mean_u_m_s": 1.12458336353302,
+      "final_hour_mean_u_m_s": 0.8822450041770935,
+      "relative_change_percent": -21.549168093202987
+    },
+    "57.5": {
+      "previous_hour_mean_u_m_s": 1.3252463340759277,
+      "final_hour_mean_u_m_s": 1.0961148738861084,
+      "relative_change_percent": -17.28972601532144
+    }
+  },
+  "final_hour_lowest_level": {
+    "mean_thl_K": 296.8980407714844,
+    "mean_qt_g_kg": 10.0,
+    "mean_resolved_tke_m2_s2": 0.0806681215763092
+  },
+  "final_flux_area_means_W_m2": {
+    "netsw": 415.24606484487543,
+    "LWin": 338.53088852043555,
+    "LWout": 434.8824394924063,
+    "hf": -152.22658186737655,
+    "ef": 0.0
+  },
+  "notes": [
+    "The run is a continuation from about 200 s; the final physical time is about 7400 s.",
+    "Hourly comparisons use the final two available one-hour windows.",
+    "Stored energy-balance flux signs are retained."
+  ]
+}

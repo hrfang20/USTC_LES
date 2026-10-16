@@ -1,0 +1,48 @@
+{
+  "snapshot_time_s": 200.2103729248047,
+  "field_times_s": [
+    10.010822296142578,
+    20.188020706176758,
+    30.267465591430664,
+    40.31092071533203,
+    50.37019348144531,
+    60.09843063354492,
+    70.24249267578125,
+    80.09529876708984,
+    90.0162124633789,
+    100.17171478271484,
+    110.05750274658203,
+    120.29864501953125,
+    130.27731323242188,
+    140.19503784179688,
+    150.36123657226562,
+    160.32720947265625,
+    170.12744140625,
+    180.22923278808594,
+    190.25779724121094,
+    200.2103729248047
+  ],
+  "grid_shape_zyx": [
+    128,
+    128,
+    128
+  ],
+  "mpi_tiles": 4,
+  "triangles": 994,
+  "geometry_max_height_m": 22.0,
+  "slice_heights_m": [
+    2.5,
+    10.5,
+    25.5
+  ],
+  "fluid_speed_min_max_m_s": [
+    0.001386159798130393,
+    2.132589817047119
+  ],
+  "notes": [
+    "No official numerical reference output used; figures are visualization, not validation.",
+    "qt output metadata says 1e-5kg/kg, but raw source writes qt0 without rescaling; used kg/kg -> g/kg.",
+    "Wind colormap clips at 99.5 percentile; scalar colormaps clip 0.5-99.5 percentile.",
+    "Surface flux signs are those stored by the solver; curves do not prove energy closure."
+  ]
+}

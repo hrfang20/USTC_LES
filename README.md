@@ -1,6 +1,6 @@
 # USTC East Campus LES
 
-使用 **[uDALES](https://github.com/uDALES/u-dales)** 建立中国科学技术大学东校区周边建筑模型，模拟地转风驱动的校园风场。目前已完成官方 **201** 示例复现、校园 IBM 前处理和 **60 秒关闭热力作用的风场试算**。后续将评估预热与统计采样，并研究稳定边界层设置。
+使用 **[uDALES](https://github.com/uDALES/u-dales)** 建立中国科学技术大学东校区周边建筑模型，模拟地转风驱动的校园风场。目前已完成官方 **201** 示例复现、校园 IBM 前处理、关闭热力作用的中性风场试算，以及包含表面能量平衡的校园 **202** 长时段续算。
 
 ## 校园中性风场：campus_neutral
 
@@ -27,6 +27,18 @@
 
 更多切片：[17.5 m](docs/assets/campus_neutral/campus_wind_z17p5.png)、[57.5 m](docs/assets/campus_neutral/campus_wind_z57p5.png)。近地面绕流与尾流较明显；57.5 m 位于当前最高建筑上方。
 
+## 校园 202 热力耦合实验
+
+![校园 202 长时段风场演变](docs/assets/results/campus202_7200/202_long_wind_evolution.gif)
+
+该实验由 200 s 启动段继续积分至约 **7400 s** 物理时间。随着表面升温，近地层由规则建筑尾流逐渐发展为覆盖计算域的热对流湍流。
+
+![校园 202 时间—高度演化](docs/assets/results/campus202_7200/202_long_time_height.png)
+
+![校园 202 最后两个一小时统计廓线](docs/assets/results/campus202_7200/202_long_profiles_hourly_comparison.png)
+
+最后两个一小时窗口的 7.5、17.5 和 57.5 m 平均风速仍分别变化约 **−21.2%、−21.5% 和 −17.3%**；表面面积加权平均温度最终约为 **308.16 K**。因此当前结果已经形成热对流湍流，但还不能视为统计稳态。完整 PNG、PDF、GIF 和数值摘要见[结果文件索引](docs/results.md)。
+
 ## 几何与数据来源
 
 研究范围为 **黄山路—太湖路—金寨路—宿松路围合区域**，道路矢量形成的不规则闭合区域面积约 **0.625 km²**。计算网格使用规则长方体：现有地面已延拓至 1090 × 1350 m 矩形，研究区域外作为无建筑平地，尚未补齐周边建筑。
@@ -49,7 +61,7 @@
 
 ## 重建与运行入口
 
-源码固定提交为 `42e40b6e1efd5529cfba8edd35005123e0ff70e4`，记录在 configs/udales_source.json。源码、Python 依赖与运行数据位于被 Git 忽略的 vendor/、outputs/；仓库保留配置、几何、脚本和选取的结果图片。集群账号、主机、模块、分区及路径在公共模板中均使用占位符。
+源码固定提交为 `42e40b6e1efd5529cfba8edd35005123e0ff70e4`，记录在 configs/udales_source.json。源码、Python 依赖与原始运行数据位于被 Git 忽略的 vendor/、outputs/；仓库保留配置、几何、脚本以及全部导出的结果图、PDF、GIF 和摘要。集群账号、主机、模块、分区及路径在公共模板中均使用占位符。
 
 | 操作 | 说明 |
 | --- | --- |
@@ -58,6 +70,7 @@
 | 官方 201 运行 | [201 操作说明](docs/hpc_case201.md) |
 | 校园中性风场准备、IBM 与试算 | [校园运行说明](docs/campus_neutral_run.md) |
 | 校园 202 热力耦合实验（已完成约 7400 s 物理时间试算） | [202 设置与运行](docs/campus202_run.md) |
+| 全部结果图、PDF、动画与摘要 | [结果文件索引](docs/results.md) |
 | 物理方法与验证路线 | [方法说明](docs/methodology.md) |
 | 几何核验 | [几何说明](docs/geometry.md) |
 
@@ -84,7 +97,7 @@ python scripts/visualize_campus202.py
 python scripts/visualize_campus202_long.py
 ```
 
-图像输出到 `outputs/validation/figures/` 下对应算例目录，同时生成 PNG/PDF 与摘要，校园脚本额外生成 GIF。长时段 202 脚本默认读取 `outputs/validation/run/202/202_run7200/`，比较最后两个一小时统计窗口。README 展示的发布副本放在 `docs/assets/`，再次绘图不会自动覆盖发布图片。原始 `cases/001/input_status.json` 记录的是早期本地准备状态，不代表后来远程前处理和试算的最新状态。
+图像输出到 `outputs/validation/figures/` 下对应算例目录，同时生成 PNG/PDF 与摘要，校园脚本额外生成 GIF。长时段 202 脚本默认读取 `outputs/validation/run/202/202_run7200/`，比较最后两个一小时统计窗口。全部导出结果的 Git 发布副本位于 `docs/assets/results/`；再次绘图后需要重新复制，才会更新发布图片。原始 `cases/001/input_status.json` 记录的是早期本地准备状态，不代表后来远程前处理和试算的最新状态。
 
 ## 下一步
 
